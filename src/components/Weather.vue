@@ -27,20 +27,17 @@ export default {
     return {
       api_key: '209aee5aca64a2a38eceee62745bc1cb',
       auth_key:'f4d582642c22103599f512ceb1d548a3',
-      url_base:'http://ipinfo.io/json',
+      url_base:'https://ipinfo.io/json',
       query: '',
       results:{},
       ip:'178.128.209.84',
       name: '',
-      weatherType: "",
-      backgroundStyle: {
-        cloudyBg:''
-      }
+      weatherType: ""
     }
   },
   methods: {
     getWeather(query) {
-      axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + query + '&appid=' + this.api_key).then(response => {
+      axios.get('https://api.openweathermap.org/data/2.5/weather?q=' + query + '&appid=' + this.api_key).then(response => {
         this.results = response.data;
           this.weatherType = response.data.weather[0].main;
 
