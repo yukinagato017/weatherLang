@@ -44,7 +44,7 @@ export default {
       })
     },
      getLocation() {
-     axios.get('http://api.ipstack.com/' + this.ip + '?access_key=' + this.auth_key + '&format=1').then(response => {
+     axios.get('api.ipstack.com/' + this.ip + '?access_key=' + this.auth_key + '&format=1').then(response => {
         this.query = response.data.city;
      });
    }
