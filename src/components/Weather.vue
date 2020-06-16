@@ -133,7 +133,7 @@ input[type=text] {
   color: $searchColor;
 }
 
-::-ms-input-placeholder { 
+::-webkit-input-placeholder { 
   color: $searchColor;
 }
 </style>
